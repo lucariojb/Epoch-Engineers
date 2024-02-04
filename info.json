@@ -1,0 +1,12 @@
+{
+    "name": "Epoch Engineers",
+    "version": "0.0.1",
+    "title": "Epoch Engineers: Factorio of Ages",
+    "author": "JanJB99",
+    "factorio_version": "1.1",
+    "dependencies": [
+        "base >= 1.1",
+        "? adaptive_movement_speed >= 0.3.0"
+    ],
+    "description": "Early Alpha Mod!!! \n\n Epoch Engineers: Factorio of Ages takes you on a journey from the Stone Age to the future, challenging you to evolve your technology and factories through human history. Build, innovate, and strategize as you progress through epochs, unlocking new possibilities and facing unique challenges at each turn. An immersive experience where history meets industrial revolution."
+}
