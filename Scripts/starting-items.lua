@@ -58,17 +58,17 @@ function checkStartArea(event)
     end
     if flintcount < flintGoal then
         for i = flintGoal, 10, 1 do
-            player.surface.create_entity { name = "flint_ground", positionx = player.position.x + math.random(10, 100), positiony = player.position.y + math.random(10, 100) }
+            player.surface.create_entity { name = "flint_ground", position = { player.position.x + math.random(10, 100), player.position.y + math.random(10, 100) } }
         end
     end
     if deadtreecount < deadtreeGoal then
         for i = deadtreecount, deadtreeGoal, 1 do
-            player.surface.create_entity { name = "dead-tree", positionx = player.position.x + math.random(10, 100), positiony = player.position.y + math.random(10, 100) }
+            player.surface.create_entity { name = "dead-tree", position = { player.position.x + math.random(10, 100), player.position.y + math.random(10, 100) } }
         end
     end
     if grasscount < grassGoal then
         for i = grasscount, grassGoal, 1 do
-            player.surface.create_entity { name = "grass-pile", positionx = player.position.x + math.random(10, 100), positiony = player.position.y + math.random(10, 100) }
+            player.surface.create_entity { name = "grass-pile", position = { player.position.x + math.random(10, 100), player.position.y + math.random(10, 100) } }
         end
     end
 end
