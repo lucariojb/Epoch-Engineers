@@ -15,8 +15,8 @@ data:extend({ {
         max_health = 300,
         corpse = "assembling-machine-1-remnants",
         dying_explosion = "assembling-machine-1-explosion",
-        collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
-        selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
+        collision_box = { { -1.4, -0.4 }, { 1.4, 1.2 } },
+        selection_box = { { -1.5, -0.5 }, { 1.5, 1.5 } },
         fast_replaceable_group = "assembling-machine",
         crafting_categories = { "wood-processing" },
         crafting_speed = 1,
@@ -34,53 +34,53 @@ data:extend({ {
                 production_type = "input",
                 base_area = 1,
                 base_level = -1,
-                pipe_picture = {
-                    north =
-                    {
-                        filename = "__base__/graphics/entity/assembling-machine-2/assembling-machine-2-pipe-N.png", --graphicspath .. "entities/wood-axis-pipe-pictures/cover-woodaxis-north.png",
-                        priority = "extra-high",
-                        width = 35,
-                        height = 18,
-                        shift = util.by_pixel(2.5, 14),
+                -- pipe_picture = {
+                --     north =
+                --     {
+                --         filename = "__base__/graphics/entity/assembling-machine-2/assembling-machine-2-pipe-N.png", --graphicspath .. "entities/wood-axis-pipe-pictures/cover-woodaxis-north.png",
+                --         priority = "extra-high",
+                --         width = 35,
+                --         height = 18,
+                --         shift = util.by_pixel(2.5, 14),
 
-                    },
-                    east =
-                    {
-                        filename = graphicspath .. "entities/wood-axis-pipe-pictures/cover-woodaxis-east.png",
-                        priority = "extra-high",
-                        scale = 0.6,
-                        width = 42,
-                        height = 76,
-                        shift = util.by_pixel(-14, 5),
-                        render_layer = "lower-object-above-shadow",
+                --     },
+                --     east =
+                --     {
+                --         filename = graphicspath .. "entities/wood-axis-pipe-pictures/cover-woodaxis-east.png",
+                --         priority = "extra-high",
+                --         scale = 0.6,
+                --         width = 42,
+                --         height = 76,
+                --         shift = util.by_pixel(-14, 5),
+                --         render_layer = "lower-object-above-shadow",
 
-                    },
-                    south =
-                    {
-                        filename = "__base__/graphics/entity/assembling-machine-2/assembling-machine-2-pipe-S.png", --graphicspath .. "entities/wood-axis-pipe-pictures/cover-woodaxis-west.png",
-                        priority = "extra-high",
-                        width = 44,
-                        height = 31,
-                        shift = util.by_pixel(0, -31.5),
+                --     },
+                --     south =
+                --     {
+                --         filename = "__base__/graphics/entity/assembling-machine-2/assembling-machine-2-pipe-S.png", --graphicspath .. "entities/wood-axis-pipe-pictures/cover-woodaxis-west.png",
+                --         priority = "extra-high",
+                --         width = 44,
+                --         height = 31,
+                --         shift = util.by_pixel(0, -31.5),
 
-                    },
-                    west =
-                    {
-                        filename = graphicspath .. "entities/wood-axis-pipe-pictures/cover-woodaxis-west.png",
-                        priority = "extra-high",
-                        scale = 0.55,
-                        width = 42,
-                        height = 76,
-                        shift = util.by_pixel(12, 3),
-                        render_layer = "lower-object-above-shadow",
+                --     },
+                --     west =
+                --     {
+                --         filename = graphicspath .. "entities/wood-axis-pipe-pictures/cover-woodaxis-west.png",
+                --         priority = "extra-high",
+                --         scale = 0.55,
+                --         width = 42,
+                --         height = 76,
+                --         shift = util.by_pixel(12, 3),
+                --         render_layer = "lower-object-above-shadow",
 
 
-                    }
-                },
+                --     }
+                -- },
                 -- pipe_covers = pipecoverspictures(),
                 pipe_connections = { {
                     type = "input",
-                    position = { 0, -2 }
+                    position = { 0, -1.2 }
                 } },
                 secondary_draw_orders = {
                     north = -1
@@ -93,9 +93,10 @@ data:extend({ {
             layers = { {
                 filename = graphicspath .. "entities/wood-crafting-facility.png",
                 priority = "high",
-                scale = 0.6,
+                shift = { 0, 0.5 },
+                scale = 0.27,
                 width = 500,
-                height = 357,
+                height = 292,
                 frame_count = 1,
                 line_length = 1,
 
