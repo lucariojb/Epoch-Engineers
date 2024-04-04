@@ -1,3 +1,4 @@
+autoplaceUtil = require("Utils.autoplace-util")
 require("__base__/prototypes/entity/biter-animations.lua")
 
 --Cow Corpse
@@ -42,6 +43,7 @@ data:extend({
         max_friends_around_to_spawn = 5,
         pollution_absorption_proportional = 0,
         pollution_absorption_absolute = 0,
+
         animations = {
             {
                 filename = graphicspath .. "nothing.png",
@@ -55,13 +57,13 @@ data:extend({
         result_units = {
             { "biter-cow", { { 0.0, 0.3 }, { 0.35, 0 } } }
         },
-        spawning_cooldown = { 5 * 60 * 60, 5 * 60 * 60 },
-        spawning_radius = 50,
-        spawning_spacing = 10,
+        spawning_cooldown = { 5 * 60 * 60, 10 * 60 * 60 }, -- 5-10 minutes
+        spawning_radius = 100,
+        spawning_spacing = 20,
         max_spawn_shift = 0,
         max_richness_for_spawn_shift = 100,
-        autoplace = enemy_autoplace.enemy_spawner_autoplace(0),
-        call_for_help_radius = 50,
+        autoplace = autoplaceUtil.singleSpawnerAutoplace(1 / 24),
+        call_for_help_radius = 0,
         spawn_decorations_on_expansion = true,
         spawn_decoration = {
             {
@@ -103,12 +105,8 @@ biter_cow.distraction_cooldown = 0
 biter_cow.min_pursue_time = 0
 biter_cow.max_pursue_distance = 0
 biter_cow.attack_parameters.range = -1
---Grafics
--- local cowScale = 0.7
--- local cowTint1 = { r = 0, g = 0, b = 0, a = 1 } -- Light brown
--- local cowTint2 = { r = 0, g = 0, b = 0, a = 1 } -- Dark brown
-
--- run_animation = biterrunanimation(cowScale, cowTint1, cowTint2)
+biter_cow.map_color = { r = 0.5, g = 0.5, b = 0.5 }
+biter_cow.enemy_map_color = { r = 0.5, g = 0.5, b = 0.5 }
 biter_cow.run_animation = {
     filename = graphicspath .. "entities/units/biter-cow.png",
     width = 512,
