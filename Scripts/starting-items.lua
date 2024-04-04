@@ -1,4 +1,4 @@
-local util = require("Epoch-Engineers.Utils.data-util")
+local util = require("Utils.data-util")
 
 
 
@@ -33,12 +33,17 @@ function remove_shipwreck(event)
 end
 
 function checkStartArea(event)
+    local deadtrees = {
+        "dead-dry-hairy-tree",
+        "dead-grey-trunk",
+        "dead-tree-desert" }
+
     local flintcount = 0
     local deadtreecount = 0
     local grasscount = 0
 
     local flintGoal = 20
-    local deadtreeGoal = 5
+    local deadtreeGoal = 10
     local grassGoal = 20
 
     local player = game.players[event.player_index]
@@ -63,7 +68,7 @@ function checkStartArea(event)
     end
     if deadtreecount < deadtreeGoal then
         for i = deadtreecount, deadtreeGoal, 1 do
-            player.surface.create_entity { name = "dead-tree", position = { player.position.x + math.random(10, 100), player.position.y + math.random(10, 100) } }
+            player.surface.create_entity { name = deadtrees[math.random(1, 3)], position = { player.position.x + math.random(10, 100), player.position.y + math.random(10, 100) } }
         end
     end
     if grasscount < grassGoal then

@@ -1,7 +1,7 @@
 -- Global Variables
 require("global-variables")
 
-local util = require("Epoch-Engineers.Utils.data-util")
+local util = require("Utils.data-util")
 util.disable_all_base_techs()
 util.disable_all_base_recipes()
 util.disableBiterNestAutoSpawn()

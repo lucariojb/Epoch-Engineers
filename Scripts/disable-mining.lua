@@ -1,4 +1,4 @@
-local util = require("Epoch-Engineers.Utils.data-util")
+local util = require("Utils.data-util")
 
 function generateMineableEntityLUT(surface)
     local LUT = {}
