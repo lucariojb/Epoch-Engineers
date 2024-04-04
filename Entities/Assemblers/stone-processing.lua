@@ -65,28 +65,9 @@ data:extend({ {
     {
         type = "recipe",
         name = "stone-crafting-table",
-        category = "crafting",
+        crafting_categories = { "crafting" },
         ingredients = { { "stick", 10 }, { "stone", 20 }, { "flint", 4 }, { "natural-fiber", 4 }, { "whetstone", 8 } },
         results = { { "stone-crafting-table", 1 } },
-        energy_required = 10,
-        enabled = false
-    },
-    --Primitive Brick
-    {
-        type = "item",
-        name = "primitive-brick",
-        icon = graphicspath .. "Icons/primitive-brick.png",
-        icon_size = 64,
-        stack_size = 10,
-        subgroup = "raw-material",
-
-    }, -- Recipe
-    {
-        type = "recipe",
-        name = "primitive-brick",
-        category = "stone-processing",
-        ingredients = { { "stone", 4 } },
-        results = { { "primitive-brick", 1 } },
         energy_required = 10,
         enabled = false
     },

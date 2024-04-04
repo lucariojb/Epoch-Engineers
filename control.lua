@@ -55,3 +55,7 @@ end)
 script.on_event(defines.events.on_entity_died, function(event)
     onCowKilled(event)
 end)
+
+-- script.on_event(defines.events.on_gui_opened, function(event)
+--     farmlandgui(event)e
+-- end)

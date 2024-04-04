@@ -264,7 +264,7 @@ data:extend({
     {
         type = "recipe",
         name = "claypit",
-        category = "stone-processing",
+        crafting_categories = { "stone-processing" },
         ingredients = { { "primitive-brick", 10 }, { "natural-fiber", 10 }, { "wood", 10 }, { "stick", 5 } },
         results = { { "claypit", 1 } },
         energy_required = 4,

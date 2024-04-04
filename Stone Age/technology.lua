@@ -182,7 +182,7 @@ data:extend({ {
     name = "bow-arrow",
     icon_size = 512,
     icon = graphicspath .. "Icons/bow.png",
-    effects = { { type = "unlock-recipe", recipe = "arrow-head-flint" }, { type = "unlock-recipe", recipe = "arrow-head-flint" }, { type = "unlock-recipe", recipe = "primitive-bow" } },
+    effects = { { type = "unlock-recipe", recipe = "arrow-head-flint" }, { type = "unlock-recipe", recipe = "arrow-head-flint" }, { type = "unlock-recipe", recipe = "primitive-bow" }, { type = "unlock-recipe", recipe = "arrow" } },
     prerequisites = { "speer-fishing" },
     unit = {
         count = 20,

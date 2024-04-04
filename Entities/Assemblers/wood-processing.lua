@@ -135,25 +135,5 @@ data:extend({ {
         energy_required = 10,
         enabled = false
     }, -- Item Wood Stick
-    {
-        type = "item",
-        name = "stick",
-        category = "wood-processing",
-        icon = graphicspath .. "Icons/stick.png",
-        icon_size = 64,
-        stack_size = 100,
-        subgroup = "raw-material",
-        fuel_category = "chemical",
-        fuel_value = data.raw["item"]["wood"].fuel_value
 
-    }, -- Stick Recipe
-    {
-        type = "recipe",
-        name = "stick",
-        category = "wood-processing",
-        ingredients = { { "wood", 1 } },
-        results = { { "stick", 1 } },
-        energy_required = 4,
-        enabled = false
-    },
 })

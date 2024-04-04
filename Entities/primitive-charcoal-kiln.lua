@@ -13,7 +13,7 @@ data:extend({
     {
         type = "recipe",
         name = "primitive-charcoal-kiln",
-        category = "crafting",
+        crafting_categories = { "crafting" },
         ingredients = { { "wood", 50 }, { "dry-grass", 20 } },
         results = { { "primitive-charcoal-kiln", 1 } },
         energy_required = 10,

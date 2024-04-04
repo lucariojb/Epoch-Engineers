@@ -90,7 +90,4 @@ data:extend({
     results = { { "arrow", 4 } },
     energy_required = 8,
     enabled = false
-}
-
-
-})
+} })

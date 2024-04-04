@@ -150,4 +150,25 @@ data:extend({
         energy_required = 2,
         enabled = false
     },
+    --Primitive Brick
+    {
+        type = "recipe",
+        name = "primitive-brick",
+        category = "stone-processing",
+        ingredients = { { "stone", 4 } },
+        results = { { "primitive-brick", 1 } },
+        energy_required = 10,
+        enabled = false
+    },
+    -- Stick Recipe
+    {
+        type = "recipe",
+        name = "stick",
+        category = "wood-processing",
+        ingredients = { { "wood", 1 } },
+        results = { { "stick", 1 } },
+        energy_required = 4,
+        enabled = false
+    },
+
 })

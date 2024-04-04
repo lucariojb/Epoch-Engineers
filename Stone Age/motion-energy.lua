@@ -91,7 +91,7 @@ data:extend({ { -- Motion Energy Fuel Category
                 type = "instant",
                 source_effects = {
                     type = "script",
-                    effect_id = "on_handcrankmill_placed"
+                    effect_id = "not-operable"
                 }
             }
 
@@ -112,7 +112,7 @@ data:extend({ { -- Motion Energy Fuel Category
         -- Motion Energy by Hand
         type = "recipe",
         name = "hand-crank-mill",
-        category = "crafting",
+        crafting_categories = { "crafting" },
         energy_required = 10,
         emission_multiplier = 1,
         ingredients = { { "stone", 8 }, { "wood", 4 }, { "whetstone", 1 } },

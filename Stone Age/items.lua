@@ -110,4 +110,28 @@ data:extend({ -- Grass
     icon_size = 254,
     stack_size = 100,
     subgroup = "raw-material"
-} })
+},
+    --Primitive Brick
+    {
+        type = "item",
+        name = "primitive-brick",
+        icon = graphicspath .. "Icons/primitive-brick.png",
+        icon_size = 64,
+        stack_size = 10,
+        subgroup = "raw-material",
+
+    },
+    --Stick
+    {
+        type = "item",
+        name = "stick",
+        category = "wood-processing",
+        icon = graphicspath .. "Icons/stick.png",
+        icon_size = 64,
+        stack_size = 100,
+        subgroup = "raw-material",
+        fuel_category = "chemical",
+        fuel_value = data.raw["item"]["wood"].fuel_value
+
+    },
+})

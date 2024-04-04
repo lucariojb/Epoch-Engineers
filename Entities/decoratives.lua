@@ -27,6 +27,11 @@ data:extend({ -- Gras Pile
                 name = "grass",
                 amount_min = 2,
                 amount_max = 8
+            }, {
+                name = "hemp-seeds",
+                amount_min = 1,
+                amount_max = 1,
+                probability = 0.05
             } }
         },
         map_color = {
