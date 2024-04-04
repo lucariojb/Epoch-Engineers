@@ -61,6 +61,33 @@ data:extend({
         spawning_radius = 100,
         spawning_spacing = 20,
         max_spawn_shift = 0,
+        resistances = {
+            {
+                type = "physical",
+                percent = 100
+            },
+            {
+                type = "explosion",
+                percent = 100
+            },
+            {
+                type = "fire",
+                percent = 100
+            },
+            {
+                type = "laser",
+                percent = 100
+            },
+            {
+                type = "acid",
+                percent = 100
+            },
+            {
+                type = "electric",
+                percent = 100
+            }
+
+        },
         max_richness_for_spawn_shift = 100,
         autoplace = autoplaceUtil.singleSpawnerAutoplace(1 / 24),
         call_for_help_radius = 0,

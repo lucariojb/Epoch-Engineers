@@ -63,17 +63,32 @@ function checkStartArea(event)
     end
     if flintcount < flintGoal then
         for i = flintGoal, 10, 1 do
-            player.surface.create_entity { name = "flint_ground", position = { player.position.x + math.random(10, 100), player.position.y + math.random(10, 100) } }
+            position = { x = player.position.x + math.random(10, 100), y = player.position.y + math.random(10, 100) }
+            if not player.surface.get_tile(position.x, position.y).collides_with("water-tile") then
+                player.surface.create_entity { name = "flint_ground", position = position }
+            else
+                i = i - 1
+            end
         end
     end
     if deadtreecount < deadtreeGoal then
         for i = deadtreecount, deadtreeGoal, 1 do
-            player.surface.create_entity { name = deadtrees[math.random(1, 3)], position = { player.position.x + math.random(10, 100), player.position.y + math.random(10, 100) } }
+            position = { x = player.position.x + math.random(10, 100), y = player.position.y + math.random(10, 100) }
+            if not player.surface.get_tile(position.x, position.y).collides_with("water-tile") then
+                player.surface.create_entity { name = deadtrees[math.random(1, 3)], position = position }
+            else
+                i = i - 1
+            end
         end
     end
     if grasscount < grassGoal then
         for i = grasscount, grassGoal, 1 do
-            player.surface.create_entity { name = "grass-pile", position = { player.position.x + math.random(10, 100), player.position.y + math.random(10, 100) } }
+            position = { x = player.position.x + math.random(10, 100), y = player.position.y + math.random(10, 100) }
+            if not player.surface.get_tile(position.x, position.y).collides_with("water-tile") then
+                player.surface.create_entity { name = "grass-pile", position = position }
+            else
+                i = i - 1
+            end
         end
     end
 end

@@ -4,6 +4,7 @@ require("Scripts.claypit")
 require("locale.createLocalsScript")
 require("Scripts.scriptEvents")
 require("Scripts.engineersHand")
+require("Scripts.cowSpawner")
 
 script.on_init(function()
     write_data("item", game.item_prototypes)
@@ -49,4 +50,8 @@ end)
 
 script.on_event(defines.events.on_player_gun_inventory_changed, function(event)
     handleEngineersHand(event)
+end)
+
+script.on_event(defines.events.on_entity_died, function(event)
+    onCowKilled(event)
 end)
