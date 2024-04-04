@@ -130,7 +130,7 @@ data:extend({ { -- Motion Energy Fuel Category
             type = "fluid",
             name = "motion-energy",
             amount = 100,
-            temperature = 10
+            temperature = 100
         } },
         energy_required = 5,
         emission_multiplier = 0,

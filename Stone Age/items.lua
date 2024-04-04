@@ -99,7 +99,7 @@ data:extend({ -- Grass
     type = "item",
     name = "raw-hide",
     icon = graphicspath .. "Icons/raw-hide.png",
-    icon_size = 128,
+    icon_size = 254,
     stack_size = 100,
     subgroup = "raw-material"
 
@@ -107,8 +107,7 @@ data:extend({ -- Grass
     type = "item",
     name = "meat",
     icon = graphicspath .. "Icons/meat.png",
-    icon_size = 128,
+    icon_size = 254,
     stack_size = 100,
     subgroup = "raw-material"
-
 } })

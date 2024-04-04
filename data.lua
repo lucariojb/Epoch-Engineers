@@ -4,6 +4,7 @@ require("global-variables")
 local util = require("data-util")
 util.disable_all_base_techs()
 util.disable_all_base_recipes()
+util.disableBiterNestAutoSpawn()
 
 require("Entities.decoratives")
 require("Entities.labs")
