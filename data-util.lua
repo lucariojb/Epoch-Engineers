@@ -67,4 +67,17 @@ function util.player_insert_item_gunSlots(player, item)
     end
 end
 
+function util.disableBiterNestAutoSpawn()
+    for _, entity in pairs(data.raw["unit-spawner"]) do
+        if entity then
+            entity.autoplace = nil
+        end
+    end
+    for _, entity in pairs(data.raw["turret"]) do
+        if entity then
+            entity.autoplace = nil
+        end
+    end
+end
+
 return util

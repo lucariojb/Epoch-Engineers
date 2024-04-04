@@ -26,11 +26,13 @@ end)
 script.on_event(defines.events.on_player_created, function(event)
     override_starting_items(event)
     remove_shipwreck(event)
+    checkStartArea(event)
 end)
 
 script.on_event(defines.events.on_cutscene_cancelled, function(event)
     override_starting_items(event)
     remove_shipwreck(event)
+    checkStartArea(event)
 end)
 
 
